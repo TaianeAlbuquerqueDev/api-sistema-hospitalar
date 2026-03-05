@@ -25,9 +25,9 @@ public class Paciente {
     @Size(min = 3, max = 80, message = "Mínimo de 3 e máximo de 80 caracteres para o nome!")
     private String nome;
 
-    // @NotBlank(message = "É necessário informar o CPF com 11 caracteres, sem traços!!")
-    // @Size(min = 11, max = 11, message = "Informe 11 caracteres para o CPF, sem traços!")
-    // @Column(unique = true)
+    @NotBlank(message = "É necessário informar o CPF com 11 caracteres, sem traços!!")
+    @Size(min = 11, max = 11, message = "Informe 11 caracteres para o CPF, sem traços!")
+    @Column(unique = true)
     private String cpf;
 
     @NotNull(message = "É necessário informar a data de nascimento!")
