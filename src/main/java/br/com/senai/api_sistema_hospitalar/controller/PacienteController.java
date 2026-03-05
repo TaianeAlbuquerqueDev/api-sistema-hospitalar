@@ -1,4 +1,5 @@
 package br.com.senai.api_sistema_hospitalar.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,7 @@ public class PacienteController {
 
     @PutMapping("/{id}")
     public Response atualizarPaciente(@PathVariable Long id, @RequestBody Paciente novo) {
+
         if (!repository.existsById(id)) {
             return new Response(404, "Paciente não encontrado(a)!");
         }
@@ -52,7 +54,7 @@ public class PacienteController {
             paciente.setNome(novo.getNome());
         }
         if (novo.getCpf() != null) {
-            paciente.setCpf(novo.getNome());
+            paciente.setCpf(novo.getCpf());
         }
         if (novo.getDataNascimento() != null) {
             paciente.setDataNascimento(novo.getDataNascimento());
