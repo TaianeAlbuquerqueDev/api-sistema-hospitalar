@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: projeto-integrador
+    name: api-sistema-hospitalar
     env: docker
     plan: free
     autoDeploy: true
