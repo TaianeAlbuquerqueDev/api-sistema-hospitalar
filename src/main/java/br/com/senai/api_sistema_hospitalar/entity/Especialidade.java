@@ -22,7 +22,7 @@ public class Especialidade {
     private String nome;
 
     @NotBlank(message = "É necessário inserir as informações médicas!")
-    @Size(min = 1, max = 1000, message = "Mínimo de 3 e máximo de 1000 caracteres para a descrição!")
+    @Size(min = 3, max = 1000, message = "Mínimo de 3 e máximo de 1000 caracteres para a descrição!")
     private String descricao;
 
     @OneToMany(mappedBy = "especialidade")

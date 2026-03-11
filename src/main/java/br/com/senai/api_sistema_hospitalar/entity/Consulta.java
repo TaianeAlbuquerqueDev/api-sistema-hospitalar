@@ -20,7 +20,7 @@ public class Consulta {
     @NotNull(message = "É necessário informar a data e a hora da consulta!")
     private LocalDateTime dataHora;
 
-    @Size(min = 1, max = 1000, message = "Mínimo de 3 e máximo de 1000 caracteres para o diagnóstico!")
+    @Size(min = 3, max = 1000, message = "Mínimo de 3 e máximo de 1000 caracteres para o diagnóstico!")
     @NotBlank(message = "É necessário informar o diagnóstico!")
     private String diagnostico;
 
